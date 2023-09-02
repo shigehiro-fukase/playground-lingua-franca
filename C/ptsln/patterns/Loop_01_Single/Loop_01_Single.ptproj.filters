@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Loop_01_Single">
+      <UniqueIdentifier>{fe9171d9-46e5-4864-bdae-30db8c65605c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c">
+      <UniqueIdentifier>{ac75f473-d8f4-472e-b532-f36cc1d2fd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core">
+      <UniqueIdentifier>{0ea0a12a-c653-4fdd-ac85-55345e8d1b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core\modal_models">
+      <UniqueIdentifier>{1c0a5c28-63bf-4456-94b8-c18070c11f36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core\platform">
+      <UniqueIdentifier>{bfb50bad-38d5-4d32-bd7f-03511822ce5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core\threaded">
+      <UniqueIdentifier>{5c153dd4-bdc2-4852-821b-fc7c2a20815b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core\utils">
+      <UniqueIdentifier>{5ee847aa-9993-4816-b61f-c5db2c1ecee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\core\utils\hashset">
+      <UniqueIdentifier>{69d6f5e1-b86c-40d4-8218-d9598c38006a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include">
+      <UniqueIdentifier>{556f5be5-b7e8-4e1c-aa09-5c6a9fd59907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\api">
+      <UniqueIdentifier>{d4c93df1-0093-453b-919a-0d00384e3485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core">
+      <UniqueIdentifier>{ac4f2dc0-ea24-4c25-ad98-de5148899054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\federated">
+      <UniqueIdentifier>{312654a9-0de4-495d-a908-4b53feb450f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\modal_models">
+      <UniqueIdentifier>{466f1594-9706-415d-ba1c-659840cdadd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\platform">
+      <UniqueIdentifier>{7ca311a3-5a38-4b8f-9046-3ef45e5c40ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\threaded">
+      <UniqueIdentifier>{cc88255c-41b4-4eb0-bd26-f0d295e59d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\utils">
+      <UniqueIdentifier>{8f7b807b-702a-448d-bc4e-7b0cf7de6fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\utils\hashset">
+      <UniqueIdentifier>{0b3a9068-0d99-4d91-a625-1be3deb45a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\include\core\utils\impl">
+      <UniqueIdentifier>{ea2d0193-4ad0-4d1d-b6ba-48dc97a528b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\lib">
+      <UniqueIdentifier>{3e55724e-6ec1-4bda-8421-acc47181ba32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reactor-c\util">
+      <UniqueIdentifier>{41591450-96b8-4776-8ec5-fc5793f09780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8f6008fa-8c36-4c93-9050-2ada32acea6a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ReactorCDir)core\lf_token.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\mixed_radix.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\modal_models\modes.c">
+      <Filter>reactor-c\core\modal_models</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\platform\lf_solid_support.c">
+      <Filter>reactor-c\core\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\port.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\reactor.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\reactor_common.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\tag.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\reactor_threaded.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_adaptive.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_GEDF_NP.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_GEDF_NP_CI.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_NP.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_PEDF_NP.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\threaded\scheduler_sync_tag_advance.c">
+      <Filter>reactor-c\core\threaded</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\trace.c">
+      <Filter>reactor-c\core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\hashset\hashset.c">
+      <Filter>reactor-c\core\utils\hashset</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\hashset\hashset_itr.c">
+      <Filter>reactor-c\core\utils\hashset</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\pqueue.c">
+      <Filter>reactor-c\core\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\semaphore.c">
+      <Filter>reactor-c\core\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\util.c">
+      <Filter>reactor-c\core\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)core\utils\vector.c">
+      <Filter>reactor-c\core\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)lib\schedule.c">
+      <Filter>reactor-c\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ReactorCDir)util\deque.c">
+      <Filter>reactor-c\util</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>$(ProjectName)</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectName)Unity.c">
+      <Filter>$(ProjectName)</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ReactorCDir)core\utils\pqueue_support.h">
+      <Filter>reactor-c\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\api\api.h">
+      <Filter>reactor-c\include\api</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\api\set.h">
+      <Filter>reactor-c\include\api</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\api\set_undef.h">
+      <Filter>reactor-c\include\api</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\federated\clock-sync.h">
+      <Filter>reactor-c\include\core\federated</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\federated\federate.h">
+      <Filter>reactor-c\include\core\federated</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\federated\net_common.h">
+      <Filter>reactor-c\include\core\federated</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\federated\net_util.h">
+      <Filter>reactor-c\include\core\federated</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\lf_token.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\lf_types.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\mixed_radix.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\modal_models\modes.h">
+      <Filter>reactor-c\include\core\modal_models</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_arduino_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_C11_threads_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_linux_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_macos_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_nrf52_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_POSIX_threads_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_solid_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_tag_64_32.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_unix_clock_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_windows_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_zephyr_board_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\platform\lf_zephyr_support.h">
+      <Filter>reactor-c\include\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\port.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\reactor.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\reactor_common.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\tag.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\data_collection.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\reactor_threaded.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\scheduler.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\scheduler_instance.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\scheduler_sync_tag_advance.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\worker_assignments.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\threaded\worker_states.h">
+      <Filter>reactor-c\include\core\threaded</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\trace.h">
+      <Filter>reactor-c\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\hashset\hashset.h">
+      <Filter>reactor-c\include\core\utils\hashset</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\hashset\hashset_itr.h">
+      <Filter>reactor-c\include\core\utils\hashset</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\impl\hashmap.h">
+      <Filter>reactor-c\include\core\utils\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\impl\pointer_hashmap.h">
+      <Filter>reactor-c\include\core\utils\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\pqueue.h">
+      <Filter>reactor-c\include\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\semaphore.h">
+      <Filter>reactor-c\include\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\util.h">
+      <Filter>reactor-c\include\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)include\core\utils\vector.h">
+      <Filter>reactor-c\include\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)util\audio_loop.h">
+      <Filter>reactor-c\util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ReactorCDir)util\deque.h">
+      <Filter>reactor-c\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\examples\C\src\patterns\$(ProjectName).lf">
+      <Filter>src</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="APP_EXP.txt">
+      <Filter>$(ProjectName)</Filter>
+    </Text>
+    <Text Include="APP_IMP.txt">
+      <Filter>$(ProjectName)</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

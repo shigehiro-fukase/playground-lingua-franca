@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|KMC_SOLID_RPI4">
+      <Configuration>Debug</Configuration>
+      <Platform>KMC_SOLID_RPI4</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|KMC_SOLID_RPI4">
+      <Configuration>Release</Configuration>
+      <Platform>KMC_SOLID_RPI4</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{e7db69d6-394f-47a7-ba04-bb848974b676}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(KMCTargetsPath)\KMC.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'" Label="Configuration">
+    <ConfigurationType>LoadableApplication</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'" Label="Configuration">
+    <ConfigurationType>LoadableApplication</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(KMCTargetsPath)\KMC.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir)$(SolutionName).props" Condition="exists('$(SolutionDir)$(SolutionName).props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\KMC.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\KMC.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\KMC.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\KMC.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">
+    <ClCompile>
+      <exeClang_Optimization>O0</exeClang_Optimization>
+      <AdditionalOptions>--config "$(ProjectDir)CompileDefinitions.txt" -Wno-unused-function %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ReactorCDir);$(ReactorCDir)include;$(ReactorCDir)include\api;$(ReactorCDir)include\core;$(ReactorCDir)include\core\platform;$(ReactorCDir)include\core\modal_models;$(ReactorCDir)include\core\utils;$(ReactorCDir)include\core\threaded;$(ReactorCDir)core\platform\bopot\target\asp3;$(ProjectRoot)\bopot\include;$(ProjectRoot)\bopot\target\solid;$(ProjectRoot)\netlogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <exeGCC_PreprocessorDefinitions>USE_NETLOGGER;PLATFORM_SOLID;INITIAL_REACT_QUEUE_SIZE=10;INITIAL_EVENT_QUEUE_SIZE=10;timespec_defined;nanosleep_defined;%(exeGCC_PreprocessorDefinitions)</exeGCC_PreprocessorDefinitions>
+    </ClCompile>
+    <SolidELF>
+      <ImportSymbolListFiles>$(ProjectDir)APP_IMP.txt;%(ImportSymbolListFiles)</ImportSymbolListFiles>
+      <ExportSymbolListFiles>$(ProjectDir)APP_EXP.txt;%(ExportSymbolListFiles)</ExportSymbolListFiles>
+    </SolidELF>
+    <Link>
+      <exeClang_Command>clang++</exeClang_Command>
+      <exeGCC_AdditionalLibraryDirectories>$(OutDir);%(exeGCC_AdditionalLibraryDirectories)</exeGCC_AdditionalLibraryDirectories>
+      <exeClang_Archives>-lnetlogger;-lbopot;%(exeClang_Archives)</exeClang_Archives>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">
+    <ClCompile>
+      <exeClang_Optimization>O2</exeClang_Optimization>
+      <AdditionalOptions>--config "$(ProjectDir)CompileDefinitions.txt" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ReactorCDir);$(ReactorCDir)include;$(ReactorCDir)include\api;$(ReactorCDir)include\core;$(ReactorCDir)include\core\platform;$(ReactorCDir)include\core\modal_models;$(ReactorCDir)include\core\utils;$(ReactorCDir)include\core\threaded;$(ReactorCDir)core\platform\bopot\target\asp3;$(ProjectRoot)\bopot\include;$(ProjectRoot)\bopot\target\solid;$(ProjectRoot)\netlogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <exeGCC_PreprocessorDefinitions>USE_NETLOGGER;PLATFORM_SOLID;INITIAL_REACT_QUEUE_SIZE=10;INITIAL_EVENT_QUEUE_SIZE=10;timespec_defined;nanosleep_defined;%(exeGCC_PreprocessorDefinitions)</exeGCC_PreprocessorDefinitions>
+    </ClCompile>
+    <SolidELF>
+      <ImportSymbolListFiles>$(ProjectDir)APP_IMP.txt;%(ImportSymbolListFiles)</ImportSymbolListFiles>
+      <ExportSymbolListFiles>$(ProjectDir)APP_EXP.txt;%(ExportSymbolListFiles)</ExportSymbolListFiles>
+    </SolidELF>
+    <Link>
+      <exeClang_Command>clang++</exeClang_Command>
+      <exeGCC_AdditionalLibraryDirectories>$(OutDir);%(exeGCC_AdditionalLibraryDirectories)</exeGCC_AdditionalLibraryDirectories>
+      <exeClang_Archives>-lnetlogger;-lbopot;%(exeClang_Archives)</exeClang_Archives>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\examples\C\src\patterns\$(ProjectName).lf">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">call "$(ProjectRoot)scripts\lftag.bat"
+call "$(ProjectRoot)scripts\Download-LfCli.bat"
+powershell -ExecutionPolicy Bypass "$(ProjectRoot)tools\lf-cli\%LFTAG%\bin\lfc.ps1" -n "%(Identity)" -o "$(ProjectRoot)playground-lingua-franca\examples\C"
+if exist "$(ProjectDir)src-gen" rmdir /s /q "$(ProjectDir)src-gen"
+if exist "$(ProjectDir)include" rmdir /s /q "$(ProjectDir)include"
+mkdir "$(ProjectDir)src-gen"
+xcopy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+echo: &gt; "$(ProjectDir)$(ProjectName)Unity.c"
+for %%i in ("$(ProjectDir)src-gen\*.c") do echo #include "src-gen/%%~nxi"&gt;&gt;"$(ProjectDir)$(ProjectName)Unity.c"
+echo: &gt; "$(ProjectDir)CompileDefinitions.txt"
+for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
+powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">Generating code...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">call "$(ProjectRoot)scripts\lftag.bat"
+call "$(ProjectRoot)scripts\Download-LfCli.bat"
+powershell -ExecutionPolicy Bypass "$(ProjectRoot)tools\lf-cli\%LFTAG%\bin\lfc.ps1" -n "%(Identity)" -o "$(ProjectRoot)playground-lingua-franca\examples\C"
+if exist "$(ProjectDir)src-gen" rmdir /s /q "$(ProjectDir)src-gen"
+if exist "$(ProjectDir)include" rmdir /s /q "$(ProjectDir)include"
+mkdir "$(ProjectDir)src-gen"
+xcopy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+echo: &gt; "$(ProjectDir)$(ProjectName)Unity.c"
+for %%i in ("$(ProjectDir)src-gen\*.c") do echo #include "src-gen/%%~nxi"&gt;&gt;"$(ProjectDir)$(ProjectName)Unity.c"
+echo: &gt; "$(ProjectDir)CompileDefinitions.txt"
+for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
+powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">Generating code...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\examples\C\src-gen\patterns\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectName)Unity.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="APP_EXP.txt" />
+    <Text Include="APP_IMP.txt" />
+  </ItemGroup>
+  <Import Project="$(KMCTargetsPath)\KMC.Cpp.targets" />
+  <Import Project="$(ProjectRoot)\ReactorC.proj" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
