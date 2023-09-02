@@ -1,0 +1,9 @@
+*Unity.c
+CompileDefinitions.txt
+/src-gen
+/include
+_templ/
+*~
+.*.sw*
+Debug/
+Release/
