@@ -14,6 +14,11 @@
 target C {
     keepalive: true
 };
+
+/* fukase: added */ preamble {=
+/* fukase: added */ #include "platform.h"
+/* fukase: added */ =}
+
 /**
  * Produce a counting sequence at random times with a minimum
  * and maximum time between outputs specified as parameters.

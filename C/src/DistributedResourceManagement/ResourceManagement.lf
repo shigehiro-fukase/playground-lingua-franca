@@ -64,6 +64,8 @@ reactor Client(
     output release:bool;
     
     state requests_outstanding:int(0);
+ 
+    state start_time: time(0) // fukase: added
     
     reaction(startup, release_trigger) -> release, request_trigger {=
         if (release_trigger->is_present) {
@@ -71,7 +73,7 @@ reactor Client(
             lf_print("%s (ID %d): At tag (%lld, %u), released access.",
                 self->name,
                 self->id,
-                tag.time - start_time, tag.microstep
+                tag.time - self->start_time, tag.microstep
             );
             lf_set(release, true);
         }
@@ -83,7 +85,7 @@ reactor Client(
         lf_print("%s (ID %d): At tag (%lld, %u), requesting access.",
             self->name,
             self->id,
-            tag.time - start_time, tag.microstep
+            tag.time - self->start_time, tag.microstep
         );
         self->requests_outstanding++;
         lf_set(request, true);
@@ -94,7 +96,7 @@ reactor Client(
         lf_print("%s (ID %d): At tag (%lld, %u), granted access.",
             self->name,
             self->id,
-            tag.time - start_time, tag.microstep
+            tag.time - self->start_time, tag.microstep
         );
         self->requests_outstanding--;
         lf_schedule(release_trigger, 0);

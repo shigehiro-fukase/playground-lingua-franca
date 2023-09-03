@@ -75,6 +75,7 @@ reactor Server(
     output query:bool;
     output update:int;
     state queries_outstanding:int(0);
+    state start_time: time(0) // fukase: added
     reaction(query_trigger) -> query {=
         lf_set(query, true);
         self->queries_outstanding++;
@@ -86,7 +87,7 @@ reactor Server(
         tag_t tag = lf_tag();
         lf_print_error("At tag (%lld, %u), deadline missed at database \"%s\". Rejecting update.\n"
                 "     Elapsed physical time is %lld.",
-                tag.time - start_time, 
+                tag.time - self->start_time, 
                 tag.microstep,
                 self->name,
                 lf_time_physical_elapsed()
@@ -162,6 +163,7 @@ reactor Database(
     input query:bool;
     output balance:int;
     state record:int(0);
+    state start_time: time(0) // fukase: added
     
     reaction(local_update, remote_update) {=
         if (local_update->is_present) {
@@ -174,7 +176,7 @@ reactor Database(
         }
         lf_print("At tag (%lld, %u), database \"%s\" updated balance to %d.\n"
                 "     Elapsed physical time is %lld.",
-                lf_time_logical() - start_time, lf_tag().microstep,
+                lf_time_logical() - self->start_time, lf_tag().microstep,
                 self->name,
                 self->record,
                 lf_time_physical_elapsed()

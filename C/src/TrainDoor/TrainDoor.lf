@@ -7,6 +7,10 @@
  */
 target C {keepalive: true};
 
+/* fukase: added */ preamble {=
+/* fukase: added */ #include "platform.h"
+/* fukase: added */ =}
+
 preamble {=
     #include <stdio.h>
     struct {

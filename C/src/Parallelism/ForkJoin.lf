@@ -11,6 +11,11 @@ target C {
     timeout: 2 sec,
     workers: 1, // Change to 4 to see speed up.
 };
+
+/* fukase: added */ preamble {=
+/* fukase: added */ #include "platform.h"
+/* fukase: added */ =}
+
 main reactor(width:int(4)) {
     a = new Source();
     t = new[width] TakeTime();
