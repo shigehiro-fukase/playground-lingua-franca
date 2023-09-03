@@ -22,6 +22,12 @@ import Random from "../lib/Random.lf"
 import PoissonClock from "../lib/PoissonClock.lf"
 import RandomDelay from "../lib/RandomDelay.lf"
 
+/* fukase: added */ preamble {=
+/* fukase: added */ #ifndef PRINTF_TIME
+/* fukase: added */ #define PRINTF_TIME "%016llX"
+/* fukase: added */ #endif // PRINTF_TIME
+/* fukase: added */ =}
+
 main reactor {
     client = new Client(seed = 0)
     cache = new Cache(seed = 0, miss_probability = 0.3)
