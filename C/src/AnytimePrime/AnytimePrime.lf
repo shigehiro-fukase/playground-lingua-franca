@@ -15,8 +15,9 @@
  */
 target C {
     fast: true,
-    files: ["/lib/c/reactor-c/core/utils/vector.h",
-            "/lib/c/reactor-c/core/utils/vector.c"],
+///* fukase: deleted */    files: ["/lib/c/reactor-c/core/utils/vector.h",
+///* fukase: deleted */            "/lib/c/reactor-c/core/utils/vector.c"],
+/* fukase: added */   files: ["../../../../reactor-c/include/core/utils/vector.h"],
     cmake-include: ["/lib/c/reactor-c/core/utils/vector.cmake"]
 };
 
