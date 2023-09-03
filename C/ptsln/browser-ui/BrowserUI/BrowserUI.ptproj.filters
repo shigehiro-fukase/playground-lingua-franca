@@ -4,6 +4,9 @@
     <Filter Include="BrowserUI">
       <UniqueIdentifier>{fe9171d9-46e5-4864-bdae-30db8c65605c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{70572934-5560-43dd-b697-3d8c3e675953}</UniqueIdentifier>
+    </Filter>
     <Filter Include="reactor-c">
       <UniqueIdentifier>{ac75f473-d8f4-472e-b532-f36cc1d2fd2c}</UniqueIdentifier>
     </Filter>
@@ -300,5 +303,10 @@
     <Text Include="APP_IMP.txt">
       <Filter>$(ProjectName)</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\lib\ServerUI.lf">
+      <Filter>lib</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
