@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|KMC_SOLID_RPI4">
@@ -74,22 +74,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\C\src\deadlines\$(ProjectName).lf">
+    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\C\src\AnytimePrime\$(ProjectName).lf">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">call "$(ProjectRoot)scripts\lftag.bat"
 call "$(ProjectRoot)scripts\Download-LfCli.bat"
 powershell -ExecutionPolicy Bypass "$(ProjectRoot)tools\lf-cli\%LFTAG%\bin\lfc.ps1" -n "%(Identity)" -o "$(ProjectRoot)playground-lingua-franca\C"
 if exist "$(ProjectDir)src-gen" rmdir /s /q "$(ProjectDir)src-gen"
 if exist "$(ProjectDir)include" rmdir /s /q "$(ProjectDir)include"
 mkdir "$(ProjectDir)src-gen"
-xcopy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
-copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
-copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+xcopy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
 echo: &gt; "$(ProjectDir)$(ProjectName)Unity.c"
 for %%i in ("$(ProjectDir)src-gen\*.c") do echo #include "src-gen/%%~nxi"&gt;&gt;"$(ProjectDir)$(ProjectName)Unity.c"
 echo: &gt; "$(ProjectDir)CompileDefinitions.txt"
-for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
-powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
+for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
+powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|KMC_SOLID_RPI4'">Generating code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">call "$(ProjectRoot)scripts\lftag.bat"
 call "$(ProjectRoot)scripts\Download-LfCli.bat"
@@ -97,16 +97,16 @@ powershell -ExecutionPolicy Bypass "$(ProjectRoot)tools\lf-cli\%LFTAG%\bin\lfc.p
 if exist "$(ProjectDir)src-gen" rmdir /s /q "$(ProjectDir)src-gen"
 if exist "$(ProjectDir)include" rmdir /s /q "$(ProjectDir)include"
 mkdir "$(ProjectDir)src-gen"
-xcopy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
-copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
-copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+xcopy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\include\%(Filename)\*" "$(ProjectDir)include\%(Filename)\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\*.c" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
+copy "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\*.h" "$(ProjectDir)src-gen\" &gt;nul 2&gt;&amp;1
 echo: &gt; "$(ProjectDir)$(ProjectName)Unity.c"
 for %%i in ("$(ProjectDir)src-gen\*.c") do echo #include "src-gen/%%~nxi"&gt;&gt;"$(ProjectDir)$(ProjectName)Unity.c"
 echo: &gt; "$(ProjectDir)CompileDefinitions.txt"
-for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
-powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
+for /F "usebackq tokens=*" %%i in ("$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\CompileDefinitions.txt") do echo -D%%i&gt;&gt;"$(ProjectDir)CompileDefinitions.txt"
+powershell -Command Set-ItemProperty -Path "$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\%(Filename).c" -Name LastWriteTime -Value $%28Get-Date%29</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">Generating code...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\C\src-gen\deadlines\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|KMC_SOLID_RPI4'">$(ProjectRoot)playground-lingua-franca\C\src-gen\AnytimePrime\%(Filename)\%(Filename).c;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
