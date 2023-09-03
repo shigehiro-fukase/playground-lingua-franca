@@ -289,7 +289,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\examples\C\src\ProtocolBuffers\$(ProjectName).lf">
+    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\C\src\ProtocolBuffers\$(ProjectName).lf">
       <Filter>src</Filter>
     </CustomBuild>
   </ItemGroup>

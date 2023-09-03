@@ -289,7 +289,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\examples\C\src\ROS\$(ProjectName).lf">
+    <CustomBuild Include="$(ProjectRoot)playground-lingua-franca\C\src\ROS\$(ProjectName).lf">
       <Filter>src</Filter>
     </CustomBuild>
   </ItemGroup>
