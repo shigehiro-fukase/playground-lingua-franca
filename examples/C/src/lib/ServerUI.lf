@@ -38,7 +38,7 @@ preamble {=
   #endif // BROWSERUI_H
 =}
 
-reactor ServerUI(initial_file: string = "page.html", hostport: uint16_t = 8080) {
+reactor ServerUI(initial_file: string({="page.html"=}), hostport: uint16_t({= 8080 =})) {
   output initialized: bool
   output request: char*
   input response: char*
@@ -52,7 +52,7 @@ reactor ServerUI(initial_file: string = "page.html", hostport: uint16_t = 8080) 
           "Content-Type: text/html; charset=UTF-8\r\n\r\n";
 
     void* listener_thread(void* args) {
-      browser_ui_t* browser_ui = (browser_ui_t*)args;
+      struct browser_ui_t* browser_ui = (struct browser_ui_t*)args;
 
       int server_socket = socket(AF_INET, SOCK_STREAM, 0);
       if (server_socket < 0) {

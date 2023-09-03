@@ -22,7 +22,7 @@ target C {
 import ServerUI from "../lib/ServerUI.lf"
 
 main reactor {
-  state count: int = 0
+  state count: int({= 0 =})
   s = new ServerUI()
 
   reaction(s.initialized) {= self->count = 0; =}
