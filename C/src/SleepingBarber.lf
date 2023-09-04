@@ -35,8 +35,15 @@ target C {
     fast: true,
     threading: false,
     cmake-include: "/lib/c/reactor-c/util/deque.cmake",
-    files: ["/lib/c/reactor-c/util/deque.h", "/lib/c/reactor-c/util/deque.c"]
+/* fukase: deleted *///    files: ["/lib/c/reactor-c/util/deque.h", "/lib/c/reactor-c/util/deque.c"]
+/* fukase: added */    files: ["../../../reactor-c/util/deque.h"]
 };
+
+/* fukase: added */ preamble {=
+/* fukase: added */ #ifndef LF_TIME_BUFFER_LENGTH
+/* fukase: added */ #define LF_TIME_BUFFER_LENGTH 64
+/* fukase: added */ #endif // LF_TIME_BUFFER_LENGTH
+/* fukase: added */ =}
 
 preamble {=    
     /**
